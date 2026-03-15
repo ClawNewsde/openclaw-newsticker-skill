@@ -1,5 +1,5 @@
 ---
-name: clawnews
+name: newsticker
 description: >
   German-language news skill for the OpenClaw and AI agent ecosystem.
   Use when the user asks for current news, briefings, breaking alerts,
