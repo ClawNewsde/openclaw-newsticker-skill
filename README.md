@@ -1,13 +1,13 @@
-# 🦞 claw://News - OpenClaw Skill
+# 🦞 claw://News — OpenClaw Skill
 
-[![ClawHub](https://img.shields.io/badge/ClawHub-clawnews-red)](https://clawhub.ai/skills/clawnews)
+[![ClawHub](https://img.shields.io/badge/ClawHub-newsticker-red)](https://clawhub.ai/skills/newsticker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-brightgreen)](https://openclaw.ai)
 [![DACH](https://img.shields.io/badge/Sprache-Deutsch-blue)](https://clawnews.de)
 
 > Dein KI-Agenten-Newsdesk von [ClawNews.de](https://clawnews.de)
 
-**claw://News** verbindet deinen OpenClaw-Agenten direkt mit ClawNews.de - der deutschsprachigen Nachrichtenplattform für KI-Agenten, das OpenClaw-Ökosystem, LLMs und Security.
+**claw://News** verbindet deinen OpenClaw-Agenten direkt mit ClawNews.de — der deutschsprachigen Nachrichtenplattform für KI-Agenten, das OpenClaw-Ökosystem, LLMs und Security.
 
 ## Was kann der Skill?
 
@@ -20,7 +20,7 @@
 ## Installation
 
 ```bash
-clawhub install clawnews
+clawhub install newsticker
 ```
 
 Danach eine neue OpenClaw-Session starten. Beim ersten Gespräch erscheint automatisch der Einrichtungsdialog.
@@ -29,15 +29,15 @@ Danach eine neue OpenClaw-Session starten. Beim ersten Gespräch erscheint autom
 
 Beim ersten Aufruf wählst du deinen Modus:
 
-**1️⃣ Alles** - Neue Artikel werden angezeigt. *(empfohlen)*
-**2️⃣ Meine Themen** - Nur ausgewählte Kategorien.
-**3️⃣ Nur Briefing** - Zusammenfassung auf Abruf, sonst Ruhe.
+**1️⃣ Alles** — Neue Artikel werden angezeigt. *(empfohlen)*
+**2️⃣ Meine Themen** — Nur ausgewählte Kategorien.
+**3️⃣ Nur Briefing** — Zusammenfassung auf Abruf, sonst Ruhe.
 
 ### Verfügbare Kategorien
 
 📰 News · 🦞 OpenClaw · 🤖 LLM & Modelle · 🔒 Security · 🔧 Tools & Apps · 💻 Open Source · 👥 Community · 📝 Tutorials · 🎙 Podcast · 🎬 Show · 📹 Videos · 🫠 Slop
 
-⚡ **Breaking Alerts gelten immer als aktiv und sind nicht abwählbar.** Bei kritischen Sicherheitsvorfällen im OpenClaw-Ökosystem wirst du benachrichtigt - das ist dein Sicherheitsgurt.
+⚡ **Breaking Alerts gelten immer als aktiv und sind nicht abwählbar.** Bei kritischen Sicherheitsvorfällen im OpenClaw-Ökosystem wirst du benachrichtigt — das ist dein Sicherheitsgurt.
 
 ## Nutzung
 
@@ -79,7 +79,7 @@ openclaw-newsticker-skill/
 - **Sprache:** Deutsch (DACH-Region)
 - **Messenger:** Alle von OpenClaw unterstützten Kanäle (Markdown wird pro Plattform konvertiert)
 - **Keine externen Code-Abhängigkeiten.** Der Skill nutzt öffentliche RSS-Feeds und REST-APIs von clawnews.de.
-- **Optimal mit:** Persistentem Memory (für Präferenzen) und Heartbeats/Scheduler (für proaktive Alerts). Funktioniert aber auch ohne - dann auf Abruf.
+- **Optimal mit:** Persistentem Memory (für Präferenzen) und Heartbeats/Scheduler (für proaktive Alerts). Funktioniert aber auch ohne — dann auf Abruf.
 
 ## Updates
 
@@ -89,7 +89,7 @@ clawhub sync --all
 
 ### Changelog
 
-**v1.1** - Launch
+**v1.1** — Launch
 - 📰 Briefing auf Abruf
 - 🔍 Recherche über REST-API
 - ⚡ Breaking Alerts (priorisiert bei jeder Feed-Prüfung)
@@ -108,10 +108,10 @@ clawhub sync --all
 
 ## Lizenz
 
-MIT License - siehe [LICENSE](LICENSE).
+MIT License — siehe [LICENSE](LICENSE).
 
 ## Feedback & Bugs
 
-- **ClawHub:** Bewertung und Kommentar auf [clawhub.ai/skills/clawnews](https://clawhub.ai/skills/clawnews)
+- **ClawHub:** Bewertung und Kommentar auf [clawhub.ai/skills/newsticker](https://clawhub.ai/skills/newsticker)
 - **GitHub:** [Issue erstellen](https://github.com/ClawNewsde/openclaw-newsticker-skill/issues)
 - **E-Mail:** skill@clawnews.de
