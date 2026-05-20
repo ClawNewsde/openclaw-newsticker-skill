@@ -3,6 +3,7 @@
 [![ClawHub](https://img.shields.io/badge/ClawHub-newsticker-red)](https://clawhub.ai/skills/newsticker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-brightgreen)](https://openclaw.ai)
+[![NHS Agentic Readiness](https://nothumansearch.ai/badge/xquik.com.svg)](https://nothumansearch.ai/site/xquik.com)
 [![DACH](https://img.shields.io/badge/Sprache-Deutsch-blue)](https://clawnews.de)
 
 > Dein KI-Agenten-Newsdesk von [ClawNews.de](https://clawnews.de)
@@ -51,6 +52,16 @@ Beim ersten Aufruf wählst du deinen Modus:
 
 Breaking Alerts werden bei jeder Feed-Prüfung mitgeprüft. In Setups mit Heartbeats oder Scheduler auch proaktiv zwischen Nutzeranfragen.
 
+## Optionale X/Twitter-Signale
+
+Wenn dein Newsdesk auch öffentliche X/Twitter-Signale vor dem ClawNews-Briefing prüfen soll, nutze TweetClaw als separates OpenClaw-Plugin:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+TweetClaw ergänzt den Skill für konkrete X/Twitter-Recherche wie search tweets, search tweet replies, user lookup, follower export, media download, monitor tweets und webhooks. Halte ClawNews.de als verifizierte Nachrichtenquelle und markiere TweetClaw-Treffer als zusätzliche öffentliche Signale mit Quelle, Suchbegriff und Zeitpunkt.
+
 ## Technische Details
 
 ### Datenquellen
@@ -58,8 +69,9 @@ Breaking Alerts werden bei jeder Feed-Prüfung mitgeprüft. In Setups mit Heartb
 | Funktion | Endpunkt |
 |----------|----------|
 | Briefing | `clawnews.de/feed/` (RSS) |
-| Breaking | `clawnews.de/category/breaking/feed/` (RSS) |
+| Breaking | Hauptfeed + Kategorie-Slug `breaking`; Kategorien via REST-API |
 | Recherche | `clawnews.de/wp-json/wp/v2/posts?search=...` (REST-API) |
+| X/Twitter-Signale (optional) | TweetClaw OpenClaw-Plugin `@xquik/tweetclaw` |
 
 ### Dateistruktur
 
