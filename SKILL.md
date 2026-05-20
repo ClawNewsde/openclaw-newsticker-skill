@@ -29,7 +29,13 @@ informiert bleiben wollen. Alle Inhalte sind auf Deutsch.
 **Voraussetzungen:** OpenClaw-Umgebung mit Webzugriff. Optimal mit
 persistentem Memory und Heartbeats/Scheduler für proaktive Alerts.
 
-**Installation:** `clawhub install clawnews`
+**Installation:** `clawhub install newsticker`
+
+**Optionale X/Twitter-Signale:** Wenn der Nutzer bereits TweetClaw
+installiert hat oder explizit öffentliche X/Twitter-Signale einbinden
+will, nutze TweetClaw als separates OpenClaw-Plugin vor dem
+ClawNews-Briefing. Installation: `openclaw plugins install @xquik/tweetclaw`.
+ClawNews.de bleibt die verifizierte Nachrichtenquelle.
 
 ---
 
@@ -156,7 +162,10 @@ erkannt und sofort ausgegeben.
 
 ### Feed
 
-`https://clawnews.de/category/breaking/feed/`
+Primär `https://clawnews.de/feed/` abrufen und Artikel mit Kategorie-Slug
+`breaking` priorisieren. Die Kategorie kann bei Bedarf über
+`https://clawnews.de/wp-json/wp/v2/categories?search=breaking` geprüft
+werden. Direkte Kategorie-Feeds können ohne aktuelle Artikel `404` liefern.
 
 Erkennung: Artikel mit Kategorie-Slug `breaking`.
 
@@ -178,6 +187,32 @@ Andernfalls werden neue Artikel im nächsten Briefing angezeigt.
 
 ---
 
+## 4. Optionale X/Twitter-Signale mit TweetClaw
+
+TweetClaw ist kein Ersatz für ClawNews.de, sondern eine zusätzliche
+OpenClaw-Quelle für öffentliche X/Twitter-Signale. Nutze diesen Pfad nur,
+wenn TweetClaw installiert ist oder der Nutzer die Installation ausdrücklich
+wünscht.
+
+### Geeignete Aufgaben
+
+- Search Tweets zu OpenClaw, ClawHub, LLMs, AI agents, Security oder Tools
+- Search Tweet Replies für Reaktionen auf relevante Releases oder Advisories
+- User Lookup und Follower Export für öffentliche Projekt- oder Maintainer-Accounts
+- Media Download für öffentlich verlinkte Screenshots, Videos oder Ankündigungen
+- Monitor Tweets und Webhooks für neue öffentliche Erwähnungen
+
+### Ausgabe-Regeln
+
+- Jeden TweetClaw-Treffer als zusätzliches Signal kennzeichnen, nicht als
+  ClawNews-Artikel.
+- Quelle, Suchbegriff, Zeitpunkt und kurze Relevanzbegründung nennen.
+- Keine privaten Daten anfordern oder ausgeben.
+- Post Tweets, Post Tweet Replies, Direct Messages oder Media Upload nur
+  nach ausdrücklicher Nutzerfreigabe erwähnen oder ausführen.
+
+---
+
 ## ⚙️ Einstellungen
 
 Trigger: „ClawNews Einstellungen", „Kategorien ändern"
@@ -194,9 +229,10 @@ Breaking bleibt immer aktiv. Format in `references/templates.md`.
 | Funktion        | Endpunkt                                             |
 |-----------------|------------------------------------------------------|
 | Briefing        | `https://clawnews.de/feed/`                          |
-| Breaking        | `https://clawnews.de/category/breaking/feed/`        |
+| Breaking        | `https://clawnews.de/feed/` + Kategorie `breaking`   |
 | Recherche       | `https://clawnews.de/wp-json/wp/v2/posts?search=...` |
 | Kategorien      | `https://clawnews.de/wp-json/wp/v2/categories`       |
+| X/Twitter       | TweetClaw OpenClaw-Plugin `@xquik/tweetclaw`         |
 
 ### RSS-Feed-Hinweise
 
